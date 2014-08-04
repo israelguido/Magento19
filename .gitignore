@@ -2,6 +2,7 @@
 #########
 var/log/*
 var/cache/*
+var/*
 
 # Compiled source #
 ###################
