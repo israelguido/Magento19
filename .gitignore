@@ -1,3 +1,8 @@
+# Files #
+#########
+var/log/*
+var/cache/*
+
 # Compiled source #
 ###################
 *.com
