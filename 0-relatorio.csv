@@ -1,0 +1,64 @@
+<table>
+<tr><th>Numero</th><th>Produto</th><th>Id</th><th>Cor</th><th>Tamanho</th><th>Stock</th></tr>
+                <tr>
+                <td>1</td>
+                <td>Black NoLIta Cami</td>
+                <td>284</td>
+                <td>Black</td>
+                <td>L</td>
+                <td>0</td>
+                </tr>
+
+                <tr>
+                <td>2</td>
+                <td>Tori Tank</td>
+                <td>418</td>
+                <td>No</td>
+                <td></td>
+                <td>0</td>
+                </tr>
+
+                <tr>
+                <td>3</td>
+                <td>Park Avenue Pleat Front Trousers</td>
+                <td>428</td>
+                <td>No</td>
+                <td></td>
+                <td>0</td>
+                </tr>
+
+                <tr>
+                <td>4</td>
+                <td>My Configurable Product</td>
+                <td>883</td>
+                <td>No</td>
+                <td></td>
+                <td>0</td>
+                </tr>
+
+                <tr>
+                <td>5</td>
+                <td>Linen Blazer</td>
+                <td>406</td>
+                <td>No</td>
+                <td></td>
+                <td>0</td>
+                </tr>
+
+                <tr>
+                <td>6</td>
+                <td>Bowery Chino Pants</td>
+                <td>414</td>
+                <td>No</td>
+                <td></td>
+                <td>0</td>
+                </tr>
+
+                <tr>
+                <td>7</td>
+                <td>Khaki Bowery Chino Pants</td>
+                <td>456</td>
+                <td>No</td>
+                <td></td>
+                <td>0</td>
+                </tr></table>

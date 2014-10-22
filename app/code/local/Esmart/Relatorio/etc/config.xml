@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Esmart_Relatorio>
+            <version>0.1.0</version>
+        </Esmart_Relatorio>
+    </modules>
+    <global>
+        <helpers>
+            <esmart_relatorio>
+                <class>Esmart_Relatorio_Helper</class>
+            </esmart_relatorio>
+        </helpers>
+    </global>
+    <frontend>
+        <routers>
+            <esmart_relatorio>
+                <use>standard</use>
+                <args>
+                    <module>Esmart_Relatorio</module>
+                    <frontName>relatorio</frontName>
+                </args>
+            </esmart_relatorio>
+        </routers>
+    </frontend>
+    <admin></admin>
+</config>

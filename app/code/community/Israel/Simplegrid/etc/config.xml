@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Israel_Simplegrid>
+            <version>0.0.1</version>
+        </Israel_Simplegrid>
+    </modules>
+    <global>
+        <models>
+            <israel_simplegrid>
+                <class>Israel_Orders_Model</class>
+                <resourceModel>israel_orders_resource</resourceModel>
+            </israel_simplegrid>
+        </models>
+        <resources>
+            <israel_simplegrid_setup>
+                <setup>
+                    <module>Israel_Simplegrid</module>
+                </setup>
+            </israel_simplegrid_setup>
+        </resources>
+        <blocks>
+            <israel_simplegrid>
+                <class>Israel_Simplegrid_Block</class>
+            </israel_simplegrid>
+        </blocks>
+        <helpers>
+            <israel_simplegrid>
+                <class>Israel_Simplegrid_Helper</class>
+            </israel_simplegrid>
+        </helpers>
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Israel_Simplegrid after="Mage_Adminhtml">Israel_Simplegrid_Adminhtml</Israel_Simplegrid>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>

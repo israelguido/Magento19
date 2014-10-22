@@ -1,0 +1,17 @@
+<config>
+    <modules>
+        <Israel_Lista>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Israel_Lista>
+    </modules>
+    <global>
+        <blocks>
+            <catalog>
+                <rewrite>
+                    <product_list>Israel_Lista_Block_Lista</product_list>
+                </rewrite>
+            </catalog>
+        </blocks>
+    </global>
+</config>

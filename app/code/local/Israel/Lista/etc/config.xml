@@ -1,0 +1,26 @@
+<config>
+    <modules>
+        <Israel_Lista>
+            <version>1.0</version>
+        </Israel_Lista>
+    </modules>
+    <global>
+        <rewrite>
+            <israel_lista_checkout_cart>
+                <from><![CDATA[#^/checkout/cart/#]]></from>
+                <to>/lista/checkout_cart/</to>
+            </israel_lista_checkout_cart>
+        </rewrite>
+    </global>
+    <frontend>
+        <routers>
+            <israel_lista>
+                <use>standard</use>
+                <args>
+                    <module>Israel_Lista</module>
+                    <frontName>lista</frontName>
+                </args>
+            </israel_lista>
+        </routers>
+    </frontend>
+</config>

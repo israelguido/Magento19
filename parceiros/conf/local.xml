@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config>
+    <host><![CDATA[heringwebstore3.cfwbxhb47s3z.sa-east-1.rds.amazonaws.com]]></host>
+        <username><![CDATA[heringwebstore]]></username>
+            <password><![CDATA[mysqlp0q1o9w2]]></password>
+                <dbname><![CDATA[heringwebstore1702_production_teste]]></dbname>
+                </config>

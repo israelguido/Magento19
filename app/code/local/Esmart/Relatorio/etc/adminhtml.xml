@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <report>
+            <children>
+                <product_info>
+                    <title>Product Info</title>
+                    <sort_order>100</sort_order>
+                    <action>relatorio</action>
+                </product_info>
+            </children>
+        </report>
+    </menu>
+</config>
