@@ -3,6 +3,8 @@
   <component name="MagicentoSettings">
     <option name="pathToMage" value="$PROJECT_DIR$/../brincafacil/app/Mage.php" />
     <option name="pathToMage" value="$PROJECT_DIR$/../brincafacil/app/Mage.php" />
+    <option name="enabled" value="false" />
+    <option name="phpEnabled" value="true" />
     <option name="pathToPhp" value="" />
     <option name="urlToMagento" value="" />
     <option name="packages" value="" />
@@ -10,6 +12,8 @@
     <option name="projectClosedCorrectly" value="false" />
     <option name="basicAuthUsername" value="" />
     <option name="basicAuthPassword" value="" />
+    <option name="pathsToMagentoSerialized" value="$PROJECT_DIR$/../magento,/var/www/brincafacil" />
+    <option name="modmanProjectChecked" value="true" />
   </component>
 </project>
 

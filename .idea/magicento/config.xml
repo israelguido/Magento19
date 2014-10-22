@@ -264,7 +264,30 @@
                 <setup>
                     <module>Mage_Persistent</module>
                 </setup>
-            </persistent_setup><allpago_installments_setup>
+            </persistent_setup><moneybookers_setup>
+                <setup>
+                    <module>Phoenix_Moneybookers</module>
+                </setup>
+            </moneybookers_setup><israel_simplegrid_setup>
+                <setup>
+                    <module>Israel_Simplegrid</module>
+                </setup>
+            </israel_simplegrid_setup><Query_NovaPontoCom_setup>
+                <setup>
+                    <module>Query_NovaPontoCom</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </Query_NovaPontoCom_setup><Query_NovaPontoCom_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </Query_NovaPontoCom_write><Query_NovaPontoCom_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </Query_NovaPontoCom_read><allpago_installments_setup>
                 <setup>
                     <module>Allpago_Installments</module>                    
                 </setup>
@@ -316,11 +339,7 @@
                 <setup>
                     <module>Esmart_DefaultSetup</module>
                 </setup>
-            </esmart_defaultsetup_setup><moneybookers_setup>
-                <setup>
-                    <module>Phoenix_Moneybookers</module>
-                </setup>
-            </moneybookers_setup><allpago_mc_setup>
+            </esmart_defaultsetup_setup><allpago_mc_setup>
                 <setup>
                     <module>Allpago_Mc</module>
                     <class>Allpago_Mc_Model_Resource_Setup</class>
@@ -1883,7 +1902,28 @@
                 </entities>
             </persistent_resource><aoe_scheduler>
 				<class>Aoe_Scheduler_Model</class>
-			</aoe_scheduler><installments>
+			</aoe_scheduler><moneybookers>
+                <class>Phoenix_Moneybookers_Model</class>
+            </moneybookers><israel_simplegrid>
+                <class>Israel_Orders_Model</class>
+                <resourceModel>israel_orders_resource</resourceModel>
+            </israel_simplegrid><Query_NovaPontoCom>
+                <class>Query_NovaPontoCom_Model</class>
+                <resourceModel>query_novapontocom_mysql4</resourceModel>
+            </Query_NovaPontoCom><query_novapontocom_mysql4>
+                <class>Query_NovaPontoCom_Model_Mysql4</class>
+                <entities>
+                    <ticket>
+                        <table>query_novapontocom_ticket</table>
+                    </ticket>
+					<ticket_log>
+                        <table>query_novapontocom_ticket_log</table>
+                    </ticket_log>
+                    <importOrderError>
+                        <table>query_novapontocom_import_order_error</table>
+                    </importOrderError>
+                </entities>
+            </query_novapontocom_mysql4><installments>
                 <class>Allpago_Installments_Model</class>
             </installments><cjm_all>
                 <class>CJM_All_Model</class>
@@ -1944,9 +1984,7 @@
 				</entities>
 			</esmart_smartcheckout_resource><esmart_defaultsetup>
                 <class>Esmart_DefaultSetup_Model</class>
-            </esmart_defaultsetup><moneybookers>
-                <class>Phoenix_Moneybookers_Model</class>
-            </moneybookers><allpago_mc>
+            </esmart_defaultsetup><allpago_mc>
                 <class>Allpago_Mc_Model</class>
                 <resourceModel>allpago_mc_resource</resourceModel>
             </allpago_mc><allpago_mc_resource>
@@ -2126,7 +2164,11 @@
                 <class>Mage_ImportExport_Block</class>
             </importexport><aoe_scheduler>
 				<class>Aoe_Scheduler_Block</class>
-			</aoe_scheduler><installments>
+			</aoe_scheduler><moneybookers><class>Phoenix_Moneybookers_Block</class></moneybookers><israel_simplegrid>
+                <class>Israel_Simplegrid_Block</class>
+            </israel_simplegrid><Query_NovaPontoCom>
+				<class>Query_NovaPontoCom_Block</class>
+            </Query_NovaPontoCom><installments>
                 <class>Allpago_Installments_Block</class>
             </installments><esmart_customer>
                 <class>Esmart_Customer_Block</class>
@@ -2136,7 +2178,7 @@
                 <class>Esmart_Eav_Block</class>
             </esmart_eav><esmart_smartcheckout>
 				<class>Esmart_SmartCheckout_Block</class>
-			</esmart_smartcheckout><moneybookers><class>Phoenix_Moneybookers_Block</class></moneybookers><allpago_mc>
+			</esmart_smartcheckout><allpago_mc>
                 <class>Allpago_Mc_Block</class>
             </allpago_mc><fcontrol>
                 <class>Allpago_Fcontrol_Block</class>
@@ -2188,15 +2230,23 @@
                 <class>Mage_CurrencySymbol_Helper</class>
             </currencysymbol><xmlconnect>
                 <class>Mage_XmlConnect_Helper</class>
-            </xmlconnect><copyright>
-                <class>Mage_Copyright_Helper</class>
-            </copyright><api2>
+            </xmlconnect><api2>
                 <class>Mage_Api2_Helper</class>
             </api2><importexport>
                 <class>Mage_ImportExport_Helper</class>
-            </importexport><aoe_scheduler>
+            </importexport><copyright>
+                <class>Mage_Copyright_Helper</class>
+            </copyright><aoe_scheduler>
 				<class>Aoe_Scheduler_Helper</class>
-			</aoe_scheduler><installments>
+			</aoe_scheduler><moneybookers>
+                <class>Phoenix_Moneybookers_Helper</class>
+            </moneybookers><esmart_relatorio>
+                <class>Esmart_Relatorio_Helper</class>
+            </esmart_relatorio><israel_simplegrid>
+                <class>Israel_Simplegrid_Helper</class>
+            </israel_simplegrid><Query_NovaPontoCom>
+                <class>Query_NovaPontoCom_Helper</class>
+            </Query_NovaPontoCom><installments>
                 <class>Allpago_Installments_Helper</class>
             </installments><esmart_customer>
                 <class>Esmart_Customer_Helper</class>
@@ -2218,9 +2268,7 @@
 				<class>Esmart_SmartCheckout_Helper</class>
 			</esmart_smartcheckout><esmart_defaultsetup>
                 <class>Esmart_DefaultSetup_Helper</class>
-            </esmart_defaultsetup><moneybookers>
-                <class>Phoenix_Moneybookers_Helper</class>
-            </moneybookers><fcontrol>
+            </esmart_defaultsetup><fcontrol>
                 <class>Allpago_Fcontrol_Helper</class>
             </fcontrol><brands>
                 <class>Mageex_Brands_Helper</class>
@@ -2632,7 +2680,11 @@
                 <salesrule>
                         <class>salesrule/observer</class>
                         <method>sales_order_afterPlace</method>
-                    </salesrule></observers>
+                    </salesrule><novapontocom_order_update_inventory>
+                        <type>model</type>
+                        <class>Query_NovaPontoCom/observer_order</class>
+                        <method>updateBoughtProductsInventory</method>
+                    </novapontocom_order_update_inventory></observers>
             </sales_order_place_after><catalog_block_product_status_display>
                 <observers>
                     <inventory>
@@ -5365,7 +5417,12 @@
                     </attributes>
                 </catalog_product>
             </import>
-        </importexport><crypt>
+        </importexport><rewrite>
+            <israel_lista_checkout_cart>
+                <from><![CDATA[#^/checkout/cart/#]]></from>
+                <to>/lista/checkout_cart/</to>
+            </israel_lista_checkout_cart>
+        </rewrite><crypt>
             <key><![CDATA[c7e4360721d59b3d5e3d28b629ee3767]]></key>
         </crypt><disable_local_modules>false</disable_local_modules><session_save><![CDATA[files]]></session_save></global><default>
         <system>
@@ -6110,15 +6167,7 @@ T: {{var telephone}}
                 <authorization_honor_period>3</authorization_honor_period>
                 <order_valid_period>29</order_valid_period>
                 <child_authorization_number>1</child_authorization_number>
-            </paypal_mecl><skyhub_payment>
-                <model>rmointegrator/sale_payment</model>
-                <active>1</active>
-                <order_status>pending</order_status>
-                <title>Skyhub</title>
-                <payment_action>sale</payment_action>
-                <allowspecific>0</allowspecific>
-                <sort_order>1</sort_order>
-            </skyhub_payment><moneybookers_acc>
+            </paypal_mecl><moneybookers_acc>
                 <group>mbookers</group>
                 <active>0</active>
                 <model>moneybookers/acc</model>
@@ -6249,7 +6298,20 @@ T: {{var telephone}}
                 <title>Onlineüberweisung (empfohlen)</title>
                 <allowspecific>1</allowspecific>
                 <specificcountry>GB,DE</specificcountry>
-            </moneybookers_obt><gwap_auth>
+            </moneybookers_obt><Query_NovaPontoCom>
+				<active>0</active>
+				<model>Query_NovaPontoCom/payment</model>
+				<order_status>pending</order_status>
+				<title>Payed on Extra.com</title>
+			</Query_NovaPontoCom><skyhub_payment>
+                <model>rmointegrator/sale_payment</model>
+                <active>1</active>
+                <order_status>pending</order_status>
+                <title>Skyhub</title>
+                <payment_action>sale</payment_action>
+                <allowspecific>0</allowspecific>
+                <sort_order>1</sort_order>
+            </skyhub_payment><gwap_auth>
                 <security_sender>ff8080813af4bee5013b04f0dccb0e2b</security_sender>			      	      	
                 <user_login>ff8080813af4bee5013b04f0dccc0e2f</user_login>							
                 <user_pwd>e4Bg9PQG</user_pwd>                
@@ -6961,7 +7023,11 @@ T: {{var telephone}}
                 <logout_clear>1</logout_clear>
                 <shopping_cart>1</shopping_cart>
             </options>
-        </persistent><installments>
+        </persistent><moneybookers>
+            <settings>
+                <activationstatus>0</activationstatus>
+            </settings>
+        </moneybookers><installments>
             <installments>
                 <active>0</active>
                 <model>Allpago_Installments_Model_Installments</model>
@@ -7079,11 +7145,7 @@ T: {{var telephone}}
                     </resources>
                 </customer_administration>
             </roles>
-        </esmart_setup><moneybookers>
-            <settings>
-                <activationstatus>0</activationstatus>
-            </settings>
-        </moneybookers><allpago>
+        </esmart_setup><allpago>
             <allpago_mc>
                 <active>1</active>
                 <model>Allpago_Mc_Model_Mc</model>
@@ -7269,9 +7331,7 @@ T: {{var telephone}}
         </Mage_CurrencySymbol><Mage_XmlConnect>
             <version>1.6.0.0.1</version>
             <innerVersion>23.1</innerVersion>
-        </Mage_XmlConnect><Mage_Copyright>
-            <version>0.1.1.0</version>
-        </Mage_Copyright><Mage_Api2>
+        </Mage_XmlConnect><Mage_Api2>
             <version>1.0.0.0</version>
         </Mage_Api2><Mage_Captcha>
             <version>1.7.0.0.0</version>
@@ -7279,9 +7339,21 @@ T: {{var telephone}}
             <version>1.6.0.2</version>
         </Mage_ImportExport><Mage_Persistent>
             <version>1.0.0.0</version>
-        </Mage_Persistent><Aoe_Scheduler>
+        </Mage_Persistent><Mage_Copyright>
+            <version>0.1.1.0</version>
+        </Mage_Copyright><Aoe_Scheduler>
 			<version>0.3.2</version>
-		</Aoe_Scheduler><Allpago_Installments>
+		</Aoe_Scheduler><Israel_Lista>
+            <version>1.0</version>
+        </Israel_Lista><Phoenix_Moneybookers>
+            <version>1.6.0.0</version>
+        </Phoenix_Moneybookers><Esmart_Relatorio>
+            <version>0.1.0</version>
+        </Esmart_Relatorio><Israel_Simplegrid>
+            <version>0.0.1</version>
+        </Israel_Simplegrid><Query_NovaPontoCom>
+            <version>1.0.2</version>
+        </Query_NovaPontoCom><Allpago_Installments>
             <version>0.1.0</version>
         </Allpago_Installments><CJM_All>
             <version>1.0.0</version>
@@ -7310,9 +7382,7 @@ T: {{var telephone}}
             <version>1.0.0.1</version>
         </Esmart_SmartCheckout><Esmart_DefaultSetup>
             <version>1.0.0.1</version>
-        </Esmart_DefaultSetup><Phoenix_Moneybookers>
-            <version>1.6.0.0</version>
-        </Phoenix_Moneybookers><Allpago_Mc>
+        </Esmart_DefaultSetup><Allpago_Mc>
             <version>0.1.3</version>
         </Allpago_Mc><Allpago_Fcontrol>
             <version>0.1.0</version>
@@ -7513,13 +7583,7 @@ T: {{var telephone}}
                     <module>Mage_XmlConnect</module>
                     <frontName>xmlconnect</frontName>
                 </args>
-            </xmlconnect><copyright>
-				<use>standard</use>
-				<args>
-					<module>Mage_Copyright</module>
-					<frontName>copyright</frontName>
-				</args>
-			</copyright><captcha>
+            </xmlconnect><captcha>
                 <use>standard</use>
                 <args>
                     <module>Mage_Captcha</module>
@@ -7531,7 +7595,37 @@ T: {{var telephone}}
                     <module>Mage_Persistent</module>
                     <frontName>persistent</frontName>
                 </args>
-            </persistent><installments>
+            </persistent><copyright>
+				<use>standard</use>
+				<args>
+					<module>Mage_Copyright</module>
+					<frontName>copyright</frontName>
+				</args>
+			</copyright><israel_lista>
+                <use>standard</use>
+                <args>
+                    <module>Israel_Lista</module>
+                    <frontName>lista</frontName>
+                </args>
+            </israel_lista><moneybookers>
+                <use>standard</use>
+                <args>
+                    <module>Phoenix_Moneybookers</module>
+                    <frontName>moneybookers</frontName>
+                </args>
+            </moneybookers><esmart_relatorio>
+                <use>standard</use>
+                <args>
+                    <module>Esmart_Relatorio</module>
+                    <frontName>relatorio</frontName>
+                </args>
+            </esmart_relatorio><Query_NovaPontoCom>
+				<use>standard</use>
+				<args>
+					<module>Query_NovaPontoCom</module>
+					<frontName>novapontocom</frontName>
+				</args>
+			</Query_NovaPontoCom><installments>
                 <use>standard</use>
                 <args>
                     <module>Allpago_Installments</module>
@@ -7567,13 +7661,7 @@ T: {{var telephone}}
                     <module>Esmart_SmartCheckout</module>
                     <frontName>smartcheckout</frontName>
                 </args>
-            </esmart_smartcheckout><moneybookers>
-                <use>standard</use>
-                <args>
-                    <module>Phoenix_Moneybookers</module>
-                    <frontName>moneybookers</frontName>
-                </args>
-            </moneybookers><fcontrol>
+            </esmart_smartcheckout><fcontrol>
                 <use>standard</use>
                 <args>
                     <module>Allpago_Fcontrol</module>
@@ -7791,15 +7879,15 @@ T: {{var telephone}}
                     <files>
                         <default>Mage_Persistent.csv</default>
                     </files>
-                </Mage_Persistent><Esmart_SmartCheckout>
-                     <files>
-                          <default>Esmart_SmartCheckout.csv</default>
-                     </files>
-                </Esmart_SmartCheckout><Phoenix_Moneybookers>
+                </Mage_Persistent><Phoenix_Moneybookers>
                     <files>
                         <default>Phoenix_Moneybookers.csv</default>
                     </files>
-                </Phoenix_Moneybookers><esmart_adwishlist>
+                </Phoenix_Moneybookers><Esmart_SmartCheckout>
+                     <files>
+                          <default>Esmart_SmartCheckout.csv</default>
+                     </files>
+                </Esmart_SmartCheckout><esmart_adwishlist>
                     <files>
                         <default>Esmart_Adwishlist.csv</default>
                     </files>
@@ -7888,21 +7976,21 @@ T: {{var telephone}}
                     <file>authorizenet.xml</file>
                 </authorizenet><xmlconnect>
                     <file>xmlconnect.xml</file>
-                </xmlconnect><mage_copyright>
-					<file>copyright.xml</file>
-				</mage_copyright><captcha>
+                </xmlconnect><captcha>
                     <file>captcha.xml</file>
                 </captcha><persistent>
                     <file>persistent.xml</file>
-                </persistent><esmart_customer module="Esmart_Customer">
+                </persistent><mage_copyright>
+					<file>copyright.xml</file>
+				</mage_copyright><moneybookers>
+                    <file>moneybookers.xml</file>
+                </moneybookers><esmart_customer module="Esmart_Customer">
                     <file>esmart/customer.xml</file>
                 </esmart_customer><skyhub>
                     <file>skyhub.xml</file>
                 </skyhub><esmart_smartcheckout>
                         <file>esmart/smartcheckout.xml</file>
-                  </esmart_smartcheckout><moneybookers>
-                    <file>moneybookers.xml</file>
-                </moneybookers><brands>
+                  </esmart_smartcheckout><brands>
                     <file>brands.xml</file>
                 </brands><convite>
                     <file>esmart/convite.xml</file>
@@ -8786,7 +8874,15 @@ T: {{var telephone}}
 					<files>
 						<default>Aoe_Scheduler.csv</default>
 					</files>
-				</aoe_scheduler><Esmart_Customer>
+				</aoe_scheduler><Phoenix_Moneybookers>
+                    <files>
+                        <default>Phoenix_Moneybookers.csv</default>
+                    </files>
+                </Phoenix_Moneybookers><Query_NovaPontoCom>
+                    <files>
+                        <default>Query_NovaPontoCom.csv</default>
+                    </files>
+                </Query_NovaPontoCom><Esmart_Customer>
                     <files>
                         <default>Esmart_Customer.csv</default>
                     </files>
@@ -8798,11 +8894,7 @@ T: {{var telephone}}
 					<files>
 						<default>Esmart_SmartCheckout.csv</default>
 					</files>
-				</Esmart_SmartCheckout><Phoenix_Moneybookers>
-                    <files>
-                        <default>Phoenix_Moneybookers.csv</default>
-                    </files>
-                </Phoenix_Moneybookers><Phoenix_VarnishCache>
+				</Esmart_SmartCheckout><Phoenix_VarnishCache>
                     <files>
                         <default>Phoenix_VarnishCache.csv</default>
                     </files>
@@ -9217,7 +9309,39 @@ T: {{var telephone}}
                         <method>sendMessageImmediately</method>
                     </xmlconnect>
                 </observers>
-            </before_save_message_queue><core_block_abstract_to_html_after>
+            </before_save_message_queue><core_block_abstract_prepare_layout_before>
+				<observers>
+					<novapontocom_sync_massaction>
+						<type>model</type>
+						<class>Query_NovaPontoCom/observer_sync</class>
+						<method>addSyncMassAction</method>
+					</novapontocom_sync_massaction>
+				</observers>
+			</core_block_abstract_prepare_layout_before><sales_order_shipment_save_after>
+                <observers>
+                    <novapontocom_shipment_updateitemstracking>
+                        <type>model</type>
+                        <class>Query_NovaPontoCom/observer_shipment</class>
+                        <method>updateItemsTracking</method>
+                    </novapontocom_shipment_updateitemstracking>
+                </observers>
+            </sales_order_shipment_save_after><order_cancel_after>
+                <observers>
+                    <novapontocom_order_cancel>
+                        <type>model</type>
+                        <class>Query_NovaPontoCom/observer_order</class>
+                        <method>cancel</method>
+                    </novapontocom_order_cancel>
+                </observers>
+            </order_cancel_after><adminhtml_sales_order_creditmemo_register_before>
+                <observers>
+                    <sales_order_creditmemo_save_before>
+                        <type>model</type>
+                        <class>Query_NovaPontoCom/observer_creditmemo</class>
+                        <method>beforeCreate</method>
+                    </sales_order_creditmemo_save_before>
+                </observers>
+            </adminhtml_sales_order_creditmemo_register_before><core_block_abstract_to_html_after>
                 <observers>
                     <allpago_mc_order_view_block>
                         <type>singleton</type>
@@ -9344,15 +9468,17 @@ T: {{var telephone}}
                     <file>importexport.xml</file>
                 </importexport><aoe_scheduler>
 					<file>aoe_scheduler/aoe_scheduler.xml</file>
-				</aoe_scheduler><allpago_installments>
+				</aoe_scheduler><moneybookers>
+                    <file>moneybookers.xml</file>
+                </moneybookers><Query_NovaPontoCom>
+                    <file>query_novapontocom.xml</file>
+                </Query_NovaPontoCom><allpago_installments>
                     <file>allpago_installments.xml</file>
                 </allpago_installments><esmart_customer>
                     <file>esmart/customer.xml</file>
                 </esmart_customer><esmart_smartcheckout>
 					<file>esmart/smartcheckout.xml</file>
-				</esmart_smartcheckout><moneybookers>
-                    <file>moneybookers.xml</file>
-                </moneybookers><brands>
+				</esmart_smartcheckout><brands>
 					<file>brands.xml</file>
 				</brands><varnishcache>
                     <file>varnishcache.xml</file>
@@ -9734,7 +9860,10 @@ T: {{var telephone}}
             </persistent_clear_expired><aoescheduler_heartbeat>
 				<schedule><config_path>system/cron/scheduler_cron_expr_heartbeat</config_path></schedule>
 				<run><model>aoe_scheduler/heartbeatTask::run</model></run>
-			</aoescheduler_heartbeat><allpago_mc_payment_authorize>
+			</aoescheduler_heartbeat><novapontocom_sync>
+                <schedule><cron_expr>*/5 * * * *</cron_expr></schedule>
+                <run><model>Query_NovaPontoCom/main::run</model></run>
+            </novapontocom_sync><allpago_mc_payment_authorize>
                 <schedule>
                     <cron_expr>*/5 * * * *</cron_expr>
                 </schedule>
@@ -9807,10 +9936,16 @@ T: {{var telephone}}
                 <args>
                     <modules>
                         <Mage_Index before="Mage_Adminhtml">Mage_Index_Adminhtml</Mage_Index>
-                    <Mage_Downloadable before="Mage_Adminhtml">Mage_Downloadable_Adminhtml</Mage_Downloadable><Mage_Paygate before="Mage_Adminhtml">Mage_Paygate_Adminhtml</Mage_Paygate><Mage_Paypal before="Mage_Adminhtml">Mage_Paypal_Adminhtml</Mage_Paypal><widget before="Mage_Adminhtml">Mage_Widget_Adminhtml</widget><Mage_PageCache before="Mage_Adminhtml">Mage_PageCache_Adminhtml</Mage_PageCache><oauth before="Mage_Adminhtml">Mage_Oauth_Adminhtml</oauth><Mage_Centinel before="Mage_Adminhtml">Mage_Centinel_Adminhtml</Mage_Centinel><Mage_Compiler before="Mage_Adminhtml">Mage_Compiler_Adminhtml</Mage_Compiler><Mage_Bundle before="Mage_Adminhtml">Mage_Bundle_Adminhtml</Mage_Bundle><connect before="Mage_Adminhtml">Mage_Connect_Adminhtml</connect><Mage_Authorizenet before="Mage_Adminhtml">Mage_Authorizenet_Adminhtml</Mage_Authorizenet><currencysymbol>Mage_CurrencySymbol_Adminhtml</currencysymbol><xmlconnect before="Mage_Adminhtml">Mage_XmlConnect_Adminhtml</xmlconnect><api2 before="Mage_Adminhtml">Mage_Api2_Adminhtml</api2><captcha>Mage_Captcha_Adminhtml</captcha><importexport before="Mage_Adminhtml">Mage_ImportExport_Adminhtml</importexport><Aoe_Scheduler before="Mage_Adminhtml">Aoe_Scheduler_Adminhtml</Aoe_Scheduler><esmart_customer before="Mage_Adminhtml">Esmart_Customer_Adminhtml</esmart_customer><Esmart_SmartCheckout before="Mage_Adminhtml">Esmart_SmartCheckout_Adminhtml</Esmart_SmartCheckout><moneybookers after="Mage_Adminhtml">Phoenix_Moneybookers</moneybookers><Phoenix_VarnishCache before="Mage_Adminhtml">Phoenix_VarnishCache_Adminhtml</Phoenix_VarnishCache><CJM_ColorSelectorPlus_Override before="Mage_Adminhtml">CJM_ColorSelectorPlus_Override_Admin</CJM_ColorSelectorPlus_Override></modules>
+                    <Mage_Downloadable before="Mage_Adminhtml">Mage_Downloadable_Adminhtml</Mage_Downloadable><Mage_Paygate before="Mage_Adminhtml">Mage_Paygate_Adminhtml</Mage_Paygate><Mage_Paypal before="Mage_Adminhtml">Mage_Paypal_Adminhtml</Mage_Paypal><widget before="Mage_Adminhtml">Mage_Widget_Adminhtml</widget><Mage_PageCache before="Mage_Adminhtml">Mage_PageCache_Adminhtml</Mage_PageCache><oauth before="Mage_Adminhtml">Mage_Oauth_Adminhtml</oauth><Mage_Centinel before="Mage_Adminhtml">Mage_Centinel_Adminhtml</Mage_Centinel><Mage_Compiler before="Mage_Adminhtml">Mage_Compiler_Adminhtml</Mage_Compiler><Mage_Bundle before="Mage_Adminhtml">Mage_Bundle_Adminhtml</Mage_Bundle><connect before="Mage_Adminhtml">Mage_Connect_Adminhtml</connect><Mage_Authorizenet before="Mage_Adminhtml">Mage_Authorizenet_Adminhtml</Mage_Authorizenet><currencysymbol>Mage_CurrencySymbol_Adminhtml</currencysymbol><xmlconnect before="Mage_Adminhtml">Mage_XmlConnect_Adminhtml</xmlconnect><api2 before="Mage_Adminhtml">Mage_Api2_Adminhtml</api2><captcha>Mage_Captcha_Adminhtml</captcha><importexport before="Mage_Adminhtml">Mage_ImportExport_Adminhtml</importexport><Aoe_Scheduler before="Mage_Adminhtml">Aoe_Scheduler_Adminhtml</Aoe_Scheduler><moneybookers after="Mage_Adminhtml">Phoenix_Moneybookers</moneybookers><Israel_Simplegrid after="Mage_Adminhtml">Israel_Simplegrid_Adminhtml</Israel_Simplegrid><esmart_customer before="Mage_Adminhtml">Esmart_Customer_Adminhtml</esmart_customer><Esmart_SmartCheckout before="Mage_Adminhtml">Esmart_SmartCheckout_Adminhtml</Esmart_SmartCheckout><Phoenix_VarnishCache before="Mage_Adminhtml">Phoenix_VarnishCache_Adminhtml</Phoenix_VarnishCache><CJM_ColorSelectorPlus_Override before="Mage_Adminhtml">CJM_ColorSelectorPlus_Override_Admin</CJM_ColorSelectorPlus_Override></modules>
                 <module>Mage_Adminhtml</module><frontName><![CDATA[admin]]></frontName></args>
             <use>admin</use></adminhtml>
-        <brands>
+        <Query_NovaPontoCom>
+                <use>admin</use>
+                <args>
+                    <module>Query_NovaPontoCom</module>
+                    <frontName>novapontocom</frontName>
+                </args>
+            </Query_NovaPontoCom><brands>
 				<use>admin</use>
 				<args>
 					<module>Mageex_Brands</module>
@@ -10181,14 +10316,14 @@ T: {{var telephone}}
                 </default>
             </web>
         </admin>
-    </websites><phpunit>
+    </websites><phoenix>
+        <moneybookers>
+            <verify_url>http://www.phoenix-medien.de/index.php?id=105</verify_url>
+        </moneybookers>
+    </phoenix><phpunit>
         <suite>
             <modules>
                 <AvS_FastSimpleImport />
             </modules>
         </suite>
-    </phpunit><phoenix>
-        <moneybookers>
-            <verify_url>http://www.phoenix-medien.de/index.php?id=105</verify_url>
-        </moneybookers>
-    </phoenix></config>
+    </phpunit></config>
